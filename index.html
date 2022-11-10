@@ -5,29 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Register app</title>4
+    <title>Cash Register App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Cash Register app</h1>
+        <h1>Cash Register App</h1>
+
+        <h3>Enter the bill amount & cash given and know the minimum number of notes to return with note value.</h3>
 
         <div class="billclass">
 
             <!-- for bill-amount -->
-            <lable for="bill-amount" class="input-lable">BILL AMOUNT</lable>
-            <input type="number" id="input-lable" min="0" />
-
+            <lable for="bill-amount" class="bill-lable">BILL AMOUNT</lable>
+            <input type="number" id="bill-amount" min="0" required />
+            <button id="next-button">NEXT</button>
             <!-- for given cash -->
-            <lable for="cash-given">CASH GIVEN</lable>
-            <input type="number" id="cash-given" min="0" />
-
-            <buttion class="check-button">CALCULATE</button>
+            <lable for="cash-given" class="cash-lable">CASH GIVEN</lable>
+            <input type="number" id="cash-given" min="0" required/>
+            <buttion id="check-button">CALCULATE</button>
         </div>
 
+        
+        <!-- error msg => wehen given cash is less than the bill amount -->
+        <p id="error-massage"></p>
+
         <!-- cash return table -->
-        <table id="dlist" class="table" change-table>
+        <div class="table">
+        <table id="dlist" class="change-table">
             <caption>
                 RETURN CHANGE
             </caption>
@@ -60,9 +66,7 @@
 
             </tr>
         </table>
-
-        <!-- error msg => wehen given cash is less than the bill amount -->
-        <p id="error-massage"></p>
+    </div>
 
     </div>
 

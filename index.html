@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register app</title>4
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cash Register app</h1>
+
+        <div class="billclass">
+
+            <!-- for bill-amount -->
+            <lable for="bill-amount" class="input-lable">BILL AMOUNT</lable>
+            <input type="number" id="input-lable" min="0" />
+
+            <!-- for given cash -->
+            <lable for="cash-given">CASH GIVEN</lable>
+            <input type="number" id="cash-given" min="0" />
+
+            <buttion class="check-button">CALCULATE</button>
+        </div>
+
+        <!-- cash return table -->
+        <table id="dlist" class="table" change-table>
+            <caption>
+                RETURN CHANGE
+            </caption>
+            <tr>
+                <th>No. of Notes</th>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+            </tr>
+
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>200</td>
+                <td>100</td>
+                <td>50</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1</td>
+
+            </tr>
+        </table>
+
+        <!-- error msg => wehen given cash is less than the bill amount -->
+        <p id="error-massage"></p>
+
+    </div>
+
+</body>
+
+<script src="./app.js"></script>
+
+</html>

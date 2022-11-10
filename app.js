@@ -28,7 +28,7 @@ function checkCashGiven() {
       hideMessage();
       showTable();
     } else {
-      showMsg("Do you wanna wash plates??");
+      showMsg("Do you wanna wash plates?? 🤔");
     }
   } else {
     showMsg("Please input a valid Positive Amount");
